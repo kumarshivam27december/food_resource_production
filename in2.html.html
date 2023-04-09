@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Food Resource Production</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set body font and background color */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Container for the header section */
+header {
+  background-color: #0056b3;
+  font-size: 30px;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Logo and navigation menu in the header */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  margin-top: 10px;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+}
+
+.nav-menu ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.nav-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero section with background image */
+.hero {
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.hero .cta-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #ffcc00;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero .cta-btn:hover {
+  background-color: #f0b500;
+}
+
+/* Product section with product cards */
+.products {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product {
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  margin-right: 20px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.product img {
+width: 100%;
+max-height: 200px;
+object-fit: cover;
+margin-bottom: 20px;
+}
+
+.product h3 {
+font-size: 24px;
+margin-bottom: 10px;
+}
+
+.product p {
+font-size: 16px;
+color: #777;
+margin-bottom: 20px;
+}
+
+.product .cta-btn {
+display: inline-block;
+padding: 10px 20px;
+font-size: 16px;
+font-weight: bold;
+text-transform: uppercase;
+background-color: #ffcc00;
+color: #fff;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.product .cta-btn:hover {
+background-color: #f0b500;
+}
+
+/* Contact section with contact form and contact information */
+.contact {
+background-color: #fff;
+padding: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.contact form {
+width: 50%;
+}
+
+.contact form label,
+.contact form input,
+.contact form textarea {
+display: block;
+margin-bottom: 10px;
+}
+
+.contact form input,
+.contact form textarea {
+width: 100%;
+padding: 10px;
+}
+
+.contact form .cta-btn {
+display: inline-block;
+padding: 10px 20px;
+font-size: 16px;
+font-weight: bold;
+text-transform: uppercase;
+background-color: #ffcc00;
+color: #fff;
+text-decoration: none;
+transition: background-color 0.3s ease;
+}
+
+.contact form .cta-btn:hover {
+background-color: #f0b500;
+}
+
+.contact-info {
+width: 50%;
+padding-left: 50px;
+}
+
+.contact-info h3 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.contact-info p {
+font-size: 16px;
+color: #777;
+margin-bottom: 10px;
+}
+
+/* Footer section with social media links and copyright information */
+.footer {
+background-color: #0056b3;
+padding: 20px;
+color: #fff;
+text-align: center;
+}
+
+.footer .social-media {
+margin-bottom: 20px;
+}
+
+.footer .social-media ul {
+list-style-type: none;
+}
+
+.footer .social-media ul li {
+display: inline;
+margin-right: 10px;
+}
+
+.footer .social-media ul li a {
+color: #fff;
+}
+
+.footer p {
+font-size: 14px;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+.hero {
+height: 300px;
+}
+
+.hero h1 {
+font-size: 32px;
+}
+
+.hero p {
+font-size: 16px;
+margin-bottom: 20px;
+}
+
+.product {
+width: 100%;
+margin-right: 0;
+margin-bottom: 20px;
+}
+
+.contact {
+flex-direction: column;
+}
+
+.contact form,
+.contact-info {
+width: 100%;
+padding: 0;
+}
+
+.footer .social-media ul li {
+margin-right: 5px;
+}
+}
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Company logo and navigation menu -->
+    Food resource production website
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products/Services</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="home">
+    <!-- Hero Section with image, headline, subheading, and CTA button -->
+    <div class="hero">
+      <h1>Quality Food Resource Production</h1>
+      <h2>Providing Sustainable Solutions for a Healthier Future</h2>
+      <a href="#products" class="cta-btn">Learn More</a>
+    </div>
+  </section>
+  <section id="about">
+    <!-- About Us Section with company overview, team, and testimonials -->
+    <div class="about-us">
+      <h2>About Us</h2>
+      <p>Company overview and information about our mission, vision, and values.</p>
+      <!-- Team members and testimonials -->
+      <div class="team">
+        <div class="team-member">
+          <img src="team-member1.jpg" alt="Team Member 1">
+          <h3>John Doe</h3>
+          <p>CEO</p>
+        </div>
+        <div class="team-member">
+          <img src="team-member2.jpg" alt="Team Member 2">
+          <h3>Jane Smith</h3>
+          <p>COO</p>
+        </div>
+      </div>
+      <div class="testimonials">
+        <h3>Testimonials</h3>
+        <div class="testimonial">
+          <img src="testimonial1.jpg" alt="Testimonial 1">
+          <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel facilisis odio."</p>
+          <cite> - John Doe, CEO</cite>
+        </div>
+        <div class="testimonial">
+          <img src="testimonial2.jpg" alt="Testimonial 2">
+          <p>"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut vel libero dui."</p>
+          <cite> - Jane Smith, COO</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="products">
+    <!-- Products/Services Section with grid layout -->
+    <div class="products-services">
+      <h2>Products/Services</h2>
+      <div class="product">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Description of Product 1. Benefits and features.</p>
+        <a href="#" class="cta-btn">Learn More</a>
+      </div>
+      <div class="product">
+        <img src="product
+2.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>Description of Product 2. Benefits and features.</p>
+        <a href="#" class="cta-btn">Learn More</a>
+      </div>
+      <div class="product">
+        <img src="product3.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>Description of Product 3. Benefits and features.</p>
+        <a href="#" class="cta-btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+  <section id="resources">
+    <!-- Resources Section with articles, videos, and downloads -->
+    <div class="resources">
+      <h2>Resources</h2>
+      <!-- Articles -->
+      <div class="articles">
+        <h3>Articles</h3>
+        <div class="article">
+          <img src="article1.jpg" alt="Article 1">
+          <h4>Article 1</h4>
+          <p>Summary of Article 1. Link to read more.</p>
+          <a href="#" class="cta-btn">Read More</a>
+        </div>
+        <div class="article">
+          <img src="article2.jpg" alt="Article 2">
+          <h4>Article 2</h4>
+          <p>Summary of Article 2. Link to read more.</p>
+          <a href="#" class="cta-btn">Read More</a>
+        </div>
+      </div>
+      <!-- Videos -->
+      <div class="videos">
+        <h3>Videos</h3>
+        <div class="video">
+          <img src="video1.jpg" alt="Video 1">
+          <h4>Video 1</h4>
+          <p>Summary of Video 1. Link to watch.</p>
+          <a href="#" class="cta-btn">Watch</a>
+        </div>
+        <div class="video">
+          <img src="video2.jpg" alt="Video 2">
+          <h4>Video 2</h4>
+          <p>Summary of Video 2. Link to watch.</p>
+          <a href="#" class="cta-btn">Watch</a>
+        </div>
+      </div>
+      <!-- Downloads -->
+      <div class="downloads">
+        <h3>Downloads</h3>
+        <div class="download">
+          <img src="download1.jpg" alt="Download 1">
+          <h4>Download 1</h4>
+          <p>Summary of Download 1. Link to download.</p>
+          <a href="#" class="cta-btn">Download</a>
+        </div>
+        <div class="download">
+          <img src="download2.jpg" alt="Download 2">
+          <h4>Download 2</h4>
+          <p>Summary of Download 2. Link to download.</p>
+          <a href="#" class="cta-btn">Download</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <!-- Contact Us Section with contact form and contact information -->
+    <div class="contact-us">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="message" placeholder
+="Message"></textarea>
+<input type="submit" value="Submit" class="cta-btn">
+</form>
+<div class="contact-info">
+<h3>Contact Information</h3>
+<p>Phone: 123-456-7890</p>
+<p>Email: info@foodresources.com</p>
+<p>Address: 1234 Food Ave, Food City, CA 56789</p>
+</div>
+</div>
+
+  </section>
+  <footer>
+    <!-- Footer section with social media links and copyright information -->
+    <div class="footer">
+      <div class="social-media">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Food Resources. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
